@@ -1,0 +1,223 @@
+.childChallengeQuestion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.childChallengeQuestion-back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.childChallengeQuestion-back-button:hover {
+  background-color: #357abd;
+  transform: scale(1.05);
+}
+
+.childChallengeQuestion-title {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  margin: 20px 0;
+}
+
+.childChallengeQuestion-content {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.childChallengeQuestion-image-container {
+  border: 5px solid white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.childChallengeQuestion-highlighted-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Bounding Box Styles */
+.bounding-box {
+  position: absolute;
+  border: 3px dashed #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+.bounding-box:hover {
+  border-style: solid;
+  background-color: rgba(255, 107, 107, 0.3);
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+}
+
+.bounding-box::after {
+  content: "🔍 Click Me!";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bounding-box:hover::after {
+  opacity: 1;
+}
+
+.bounding-box.selected {
+  border-color: #4a90e2;
+  background-color: rgba(74, 144, 226, 0.2);
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.4);
+  animation: boxDance 0.5s ease;
+}
+
+@keyframes boxDance {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(3px); }
+  75% { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+
+.childChallengeQuestion-answer-section {
+  width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.childChallengeQuestion-answer-box {
+  background: #fff9e6;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+  min-height: 100px;
+}
+
+.childChallengeQuestion-answer-label {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.childChallengeQuestion-answer-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4a90e2;
+  animation: popIn 0.3s ease;
+}
+
+.childChallengeQuestion-answer-text.bubble {
+  position: relative;
+  background: white;
+  border-radius: 15px;
+  padding: 1rem;
+  display: inline-block;
+  border: 3px solid #4a90e2;
+}
+
+.childChallengeQuestion-answer-placeholder {
+  font-size: 1.3rem;
+  color: #aaa;
+  font-style: italic;
+  padding: 1rem;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.childChallengeQuestion-loading {
+  font-size: 1.5rem;
+  color: #4a90e2;
+  margin-top: 2rem;
+}
+
+.childChallengeQuestion-error {
+  color: #ff3333;
+  font-size: 1.2rem;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 80%;
+}
+
+@media (max-width: 768px) {
+  .childChallengeQuestion-title {
+      font-size: 2rem;
+  }
+  
+  .childChallengeQuestion-answer-label {
+      font-size: 1.2rem;
+  }
+  
+  .childChallengeQuestion-answer-text {
+      font-size: 1.5rem;
+  }
+}
+
+.childChallengeQuestion-animation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .childChallengeQuestion-animation-overlay {
+    padding: 20px;
+  }
+  
+  .childChallengeQuestion-animation-overlay svg {
+    max-width: 80%;
+    height: auto;
+  }
+}

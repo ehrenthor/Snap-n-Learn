@@ -1,0 +1,42 @@
+.adultHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 2rem;
+   border-bottom: 1px solid #eaeaea;
+}
+
+.adultHeader-title {
+   font-family: 'Poppins', sans-serif;
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: #000000;
+   letter-spacing: -0.5px;
+}
+
+.adultHeader-profile {
+   display: flex;
+   align-items: center;
+   gap: 0.75rem;
+   padding: 0.5rem 1rem;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background-color 0.2s ease;
+   background-color: #f7fafc;
+   box-shadow: 0 4px 12px rgba(46, 46, 46, 0.2);
+}
+
+ .adultHeader-profile:hover {
+   background-color: #868686;
+}
+
+.adultHeader-profile-username {
+   font-size: 0.9rem;
+   color: #4a5568;
+   font-weight: 500;
+}
+
+/* Profile icon styling */
+.adultHeader-profile::before {
+   font-size: 1.2rem;
+}

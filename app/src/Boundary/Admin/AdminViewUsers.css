@@ -1,0 +1,148 @@
+/* AdminViewUsers.css */
+.adminViewUsers-container {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fbfe 0%, #f4f7fa 100%);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e8f0f8;
+  box-sizing: border-box;
+}
+
+.adminViewUsers-header {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  padding: 4rem 0 1.5rem;
+  border-bottom: 2px solid #d1e0f5;
+  text-align: center;
+}
+
+.adminViewUsers-title {
+  font-size: 1.75rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.adminViewUsers-error {
+  color: #c53030;
+  background: #fff5f5;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #fed7d7;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.adminViewUsers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.adminViewUsers-listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  margin: 0.75rem 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: linear-gradient(to right, #ffffff 0%, #f8fafc 100%);
+  box-shadow: #2c3e50;
+}
+
+.adminViewUsers-listItem:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 6px -1px rgba(66, 153, 225, 0.15);
+  border-color: #90cdf4;
+  background: linear-gradient(to right, #f8fafc 0%, #ebf4ff 100%);
+}
+
+.adminViewUsers-username {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.adminViewUsers-userType {
+  color: #2b6cb0;
+  font-size: 0.9em;
+  background: #ebf4ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid #c3dafe;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.adminViewUsers-backButton {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  padding: 0.5rem 1.5rem;
+  background: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(66, 153, 225, 0.2);
+}
+
+.adminViewUsers-backButton:hover {
+  background: #3182ce;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(66, 153, 225, 0.25);
+}
+
+.adminViewUsers-listItem-deleted {
+  background: #fff5f5 !important;
+  border-color: #fed7d7 !important;
+}
+
+.adminViewUsers-listItem-deleted .adminViewUsers-username {
+  color: #dc2626;
+  opacity: 0.7;
+}
+
+.adminViewUsers-listItem-deleted .adminViewUsers-userType {
+  background: #fee2e2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+.adminViewUsers-listItem-deleted:hover {
+  background: #ffe4e6 !important;
+  border-color: #fda4af !important;
+}
+
+.adminViewUsers-deletedTag {
+  background: #dc2626;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8em;
+  margin-left: 0.5rem;
+}
+
+.adminViewUsers-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

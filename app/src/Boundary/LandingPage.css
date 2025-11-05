@@ -1,0 +1,110 @@
+body {
+    background-image: url('../Assets/background.png'); /* Path to your background image */
+    background-size: 100%;
+    background-position: center; /* Center the background image */
+    background-repeat: repeat; /* Prevent repeating the background image */
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Ensure the body takes the full height of the page */
+    font-family: Arial, sans-serif;
+  }
+
+/* General styling for the landing page */
+.landingPage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Kid-friendly font */
+    opacity: 0;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-out {
+    animation: fadeOut 0.5s ease-in forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  /* Logo styling */
+  .landingPage-logoContainer {
+    margin-bottom: 30px;
+  }
+  
+  .landingPage-logo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Circle shape */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadowy outline */
+    border: 4px solid #fff; /* Optional: Adds a white border */
+  }
+  
+  /* Welcome button styling */
+  .landingPage-welcomeButton {
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff6f61; /* Kid-friendly color */
+    border: none;
+    border-radius: 25px; /* Rounded outlines */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .landingPage-welcomeButton:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    background-color: #ff4a3d; /* Darker shade on hover */
+  }
+  
+  /* Admin button/link styling */
+  .landingPage-adminLink {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333; /* Dark text for contrast */
+    text-decoration: none; /* Removes underline */
+    cursor: pointer;
+    background-color: white; /* White capsule background */
+    padding: 8px 20px; /* Padding for capsule shape */
+    border-radius: 20px; /* Rounded edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .landingPage-adminLink:hover {
+    color: #333; /* Slightly darker on hover */
+  }
+
+  /* Fade-out animation for transition */
+.fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }

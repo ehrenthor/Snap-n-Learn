@@ -1,0 +1,44 @@
+.imageHighlighter-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.imageHighlighter-image-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.imageHighlighter-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+.imageHighlighter-bounding-box {
+    position: absolute;
+    border: 3px solid; /* Thicker border */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.imageHighlighter-bounding-box.imageHighlighter-active {
+    border-width: 3px; /* Thicker border */
+}
+
+.imageHighlighter-label-container {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.imageHighlighter-label-item {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+    font-weight: 500;
+}

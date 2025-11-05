@@ -1,0 +1,139 @@
+/* AdminUserDetail.css */
+.adminUserDetail-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.adminUserDetail-content {
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.adminUserDetail-title {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #1e293b;
+  margin: 0 0 2rem;
+  font-weight: 600;
+}
+
+.adminUserDetail-infoGrid {
+  grid-template-columns: minmax(300px, 600px);
+  justify-content: center;
+}
+
+.adminUserDetail-infoCard {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.adminUserDetail-infoCard h3 {
+  color: #3b82f6;
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+}
+
+.adminUserDetail-infoCard p {
+  color: #475569;
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.adminUserDetail-backButton {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.adminUserDetail-backButton:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+}
+
+.adminUserDetail-error {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto;
+  border: 1px solid #fecaca;
+}
+
+.adminUserDetail-loading {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+
+.adminUserDetail-suspendButton {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.adminUserDetail-suspendButton.suspend {
+  background: #ef4444;
+  color: white;
+}
+
+.adminUserDetail-suspendButton.unsuspend {
+  background: #10b981;
+  color: white;
+}
+
+.adminUserDetail-suspendButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.adminUserDetail-suspendButton.suspend:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.adminUserDetail-suspendButton.unsuspend:hover:not(:disabled) {
+  background: #059669;
+}
+
+.adminUserDetail-suspendButton:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.7;
+}

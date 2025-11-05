@@ -1,0 +1,148 @@
+.editChildAccount-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.editChildAccount-main {
+  flex-grow: 1;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+  margin-left: 3%;
+}
+
+.editChildAccount-main.editChildAccount-shifted {
+  margin-left: 15%;
+}
+
+.editChildAccount-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.editChildAccount-title {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.editChildAccount-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.editChildAccount-formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.editChildAccount-label {
+  font-size: 1rem;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.editChildAccount-checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #3498db;
+}
+
+.editChildAccount-input,
+.editChildAccount-select {
+  padding: 0.8rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.editChildAccount-input:focus,
+.editChildAccount-select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.editChildAccount-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: flex-end;
+}
+
+.editChildAccount-save,
+.editChildAccount-cancel,
+.editChildAccount-delete {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.editChildAccount-save {
+  background-color: #3498db;
+  color: white;
+}
+
+.editChildAccount-save:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.editChildAccount-cancel {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.editChildAccount-cancel:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-1px);
+}
+
+.editChildAccount-delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.editChildAccount-delete:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.editChildAccount-error {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.editChildAccount-success {
+  background-color: #dcfce7;
+  color: #16a34a;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.editChildAccount-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #3498db;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,133 @@
+/* Main Container */
+.adultRegisterChild-container {
+    min-height: 100vh;
+  }
+  
+  /* Content Area */
+  .adultRegisterChild-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Back Button */
+.adultRegisterChild-back-button {
+    background-color: #e0f2fe; /* Light blue background */
+    border: 1px solid #bfdbfe; /* Subtle border */
+    color: #1e40af; /* Darker blue text */
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .adultRegisterChild-back-button:hover {
+    background-color: #bfdbfe;
+    color: #1e3a8a;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .adultRegisterChild-back-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Registration Card */
+  .adultRegisterChild-card {
+    background: white;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Title */
+  .adultRegisterChild-title {
+    color: #1e293b;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Form Group */
+  .adultRegisterChild-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Input Fields */
+.adultRegisterChild-input {
+    width: 100%;
+    max-width: 400px; /* Constrain maximum width */
+    padding: 0.75rem 1rem; /* Balanced horizontal padding */
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    margin: 0 auto; /* Center the input */
+    display: block; /* Needed for margin auto to work */
+    background-color: #f8fafc; /* Subtle background */
+  }
+  
+  .adultRegisterChild-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    background-color: white; /* Change background on focus */
+  }
+  
+  /* Optional: Add placeholder styling */
+  .adultRegisterChild-input::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+  }
+  
+  /* Submit Button */
+  .adultRegisterChild-submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .adultRegisterChild-submit-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .adultRegisterChild-submit-button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+  }
+  
+  /* Error Message */
+  .adultRegisterChild-error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 640px) {
+    .adultRegisterChild-content {
+      padding: 1.5rem;
+    }
+    
+    .adultRegisterChild-card {
+      padding: 1.5rem;
+    }
+  }

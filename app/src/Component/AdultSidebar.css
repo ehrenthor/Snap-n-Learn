@@ -1,0 +1,75 @@
+.adultSidebar-container {
+    position: relative;
+  }
+  
+.adultSidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    transition: transform 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+  }
+  
+.adultSidebar.adultHomepage-closed {
+    transform: translateX(-250px);
+}
+
+.adultSidebar.adultHomepage-open {
+    transform: translateX(0);
+}
+
+.adultSidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.adultSidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #34495e;
+    cursor: pointer;
+}
+
+.adultSidebar ul li:hover {
+    background-color: #34495e;
+}
+
+.adultSidebar-close-button {
+    background: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 1%;
+    right: 10px;
+    width: 40px; 
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.adultSidebar-toggle-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.adultSidebar-toggle-button.hidden {
+    display: none;
+}
+
+.adultSidebar-toggle-button.visible {
+    display: block;
+}

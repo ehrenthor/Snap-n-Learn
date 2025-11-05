@@ -1,0 +1,134 @@
+/* Container */
+.registerAdmin-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fbfe 0%, #f4f7fa 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.registerAdmin-form-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 3rem 2.5rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Title */
+.registerAdmin-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Form */
+.registerAdmin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input Fields */
+.registerAdmin-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: border-color 0.3s;
+  background: #f8fafb;
+}
+
+.registerAdmin-input {
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: transparent;
+  outline: none;
+  width: 100%;
+}
+
+/* Icons */
+.registerAdmin-input-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  opacity: 0.6;
+}
+
+/* Buttons */
+.registerAdmin-button {
+  padding: 1.2rem;
+  background: #05b0c7;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.registerAdmin-button:hover {
+  background: #0494a7;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(5, 176, 199, 0.2);
+}
+
+.registerAdmin-otp-section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.registerAdmin-otp-button {
+  padding: 1rem 1.5rem;
+  background: #05b0c7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  height: fit-content;
+}
+
+/* Return Button */
+.registerAdmin-return-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.registerAdmin-return-button:hover {
+  background-color: rgba(5, 176, 199, 0.1);
+}
+
+/* Error Message */
+.password-error {
+  color: #dc2626;
+  margin-top: -0.5rem;
+  font-size: 0.9rem;
+  padding-left: 0.5rem;
+}

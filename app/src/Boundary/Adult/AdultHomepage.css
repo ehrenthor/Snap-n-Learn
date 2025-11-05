@@ -1,0 +1,168 @@
+/* Header Section */
+.adultHomepage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+}
+
+/* Logout Button */
+.adultHomepage-button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    width: fit-content; 
+}
+
+.adultHomepage-stats-button {
+    background-color: #002aff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: #2c3e50;
+}
+
+.adultHomepage-logout-button {
+    background-color: #002aff;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: #2c3e50;
+}
+
+.adultHomepage-logout-button:hover {
+    background-color: #f1f5f9;
+    color: #2563eb;
+}
+
+.adultHomepage-stats-button:hover {
+    background-color: #f1f5f9;
+    color: #2563eb;
+}
+
+/* Main Container */
+.adultHomepage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content Area */
+.adultHomepage-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Title */
+.adultHomepage-title {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+}
+
+/* Children Grid */
+.adultHomepage-children-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+/* Child Card */
+.adultHomepage-child-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.adultHomepage-child-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Child Initials Circle */
+.adultHomepage-child-initials {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+/* Child Name */
+.adultHomepage-child-name {
+    color: #1f2937;
+    font-size: 0.9rem;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+/* Add Button */
+.adultHomepage-add-button {
+    background: white;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+}
+
+.adultHomepage-add-button:hover {
+    border-color: #3b82f6;
+    background-color: #f8fafc;
+    color: #3b82f6;
+}
+
+.adultHomepage-plus-icon {
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+/* Error Message */
+.adultHomepage-error {
+    color: #ef4444;
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .adultHomepage-content {
+        padding: 1.5rem;
+    }
+
+    .adultHomepage-children-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,88 @@
+  /* Lottie Animation */
+  .childHomepage-lottieContainer {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    opacity: 1;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-in forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-out {
+    animation: fadeOut 0.3s ease-in forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  /* Speech Bubble */
+  .childHomepage-speechBubble {
+    position: absolute;
+    left: -220px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    font-size: 1.1rem;
+    color: #333;
+    opacity: 0;
+    pointer-events: none;
+  }
+/*   
+  .childHomepage-speechBubble:after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-left-color: white;
+    border-right: 0;
+  } */
+  
+  /* Responsive Adjustments
+  @media (max-width: 768px) {
+  
+    .childHomepage-lottieContainer {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+    }
+  
+    .childHomepage-speechBubble {
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: none;
+      margin-bottom: 10px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .childHomepage-speechBubble:after {
+      display: none;
+    }
+  } */

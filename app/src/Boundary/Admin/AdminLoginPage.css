@@ -1,0 +1,98 @@
+/* Container */
+.adminLogin-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  position: relative;
+}
+
+/* Form */
+.adminLogin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+  
+.adminLogin-title {
+  text-align: center;
+}
+
+/* Input Fields */
+.adminLogin-input {
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: transparent;
+  outline: none;
+}
+
+.adminLogin-logo-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.adminLogin-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+}
+
+.adminLogin-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 0.8rem;
+  transition: border-color 0.3s;
+}
+
+/* Icons */
+.adminLogin-input-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  opacity: 0.6;
+}
+  
+/* Button */
+.adminLogin-button {
+  background: #07abb1;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+/* Button */
+.adminLogin-button:hover {
+  background-color: #05989e;
+}
+
+.adminLogin-register-admin-button {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background: #17a2b8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.adminLogin-register-admin-button:hover {
+  background: #138496;
+}

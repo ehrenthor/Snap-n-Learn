@@ -1,0 +1,656 @@
+/* ChildUploadImagePage.css */
+.childUploadImage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  padding-top: 80px; /* Added padding to avoid overlap with back button */
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-sizing: border-box;
+}
+
+.childUploadImage-back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 100; /* Ensure it's above other content */
+}
+
+.childUploadImage-back-button:hover {
+  background-color: #357abd;
+  transform: scale(1.05);
+}
+
+.childUploadImage-content {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.childUploadImage-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.childUploadImage-upload-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* For positioning camera controls */
+}
+
+/* Styles for the initial upload options (Pick file / Take photo) */
+.childUploadImage-drop-zone {
+  width: 100%;
+  max-width: 400px; /* Max width for the options box */
+  min-height: 250px; /* Adjusted height */
+  border: 4px dashed #ffffff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.childUploadImage-options {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically on smaller screens if needed */
+  gap: 20px; /* Space between buttons */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.childUploadImage-option-button {
+  padding: 15px 25px;
+  font-size: 1.3rem;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 220px; /* Ensure buttons have a decent width */
+  justify-content: center;
+}
+
+.childUploadImage-option-button:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3);
+}
+
+.childUploadImage-option-button .childUploadImage-drop-icon {
+  font-size: 1.8rem; /* Icon size within button */
+  margin-bottom: 0; /* Reset margin if previously set for standalone icon */
+}
+
+.childUploadImage-drop-hint {
+  font-size: 1rem;
+  margin-top: 10px;
+  opacity: 0.8;
+  color: #f0f0f0;
+}
+
+.childUploadImage-file-input {
+  display: none;
+}
+
+/* Camera View Styles */
+.childUploadImage-camera-view {
+  width: 100%;
+  max-width: 600px; /* Control max width of camera view */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* For absolute positioning of controls */
+  background-color: #333; /* Dark background for camera view */
+  border-radius: 15px;
+  overflow: hidden; /* Clip video to border radius */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px; /* Space below camera view */
+}
+
+.childUploadImage-video-feed {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 70vh; /* Limit video height */
+  display: block; /* Remove extra space below video */
+}
+
+.childUploadImage-camera-controls {
+  display: flex;
+  justify-content: center; /* Center the capture button */
+  align-items: center;
+  width: 100%;
+  padding: 15px 0; /* Padding around controls */
+  position: absolute; /* Position over the video or at the bottom */
+  bottom: 10px; /* Adjust as needed */
+  left: 0;
+  gap: 20px; /* Space between capture and cancel */
+  z-index: 5; /* Ensure controls are above video if overlapping */
+}
+
+.childUploadImage-capture-button {
+  width: 80px;
+  height: 80px;
+  background-color: #ff4757; /* Bright color for capture */
+  color: white;
+  border: 5px solid white; /* White border for pop */
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-out;
+  font-size: 1.5rem; /* Emoji or text size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; /* For better vertical centering of text/emoji */
+}
+
+.childUploadImage-capture-button:hover {
+  background-color: #e04050;
+  transform: scale(1.1);
+}
+
+.childUploadImage-capture-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.childUploadImage-cancel-button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  color: #333;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.childUploadImage-cancel-button:hover {
+  background-color: white;
+  transform: scale(1.05);
+}
+
+
+/* Image Preview and Result Styles */
+.childUploadImage-preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.childUploadImage-preview-frame {
+  border: 10px solid #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  max-width: 100%; /* Ensure it doesn't overflow content area */
+}
+
+.childUploadImage-preview {
+  border-radius: 10px;
+  max-width: 100%; /* Make image responsive within frame */
+  height: auto;
+  display: block;
+  max-height: 60vh; /* Limit preview height */
+}
+
+.childUploadImage-change-button {
+  padding: 12px 22px;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #777777, #555555);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  margin-top: 10px; /* Space from upload button */
+}
+.childUploadImage-change-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.25);
+}
+.childUploadImage-change-button:disabled {
+  background: #aaaaaa;
+  cursor: not-allowed;
+}
+
+
+.childUploadImage-highlighter-wrapper {
+  border: 10px solid #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 5px;
+  overflow: hidden;
+  max-width: 100%; /* Ensure it doesn't overflow content area */
+}
+
+.childUploadImage-highlighted-image { /* This class is used by ImageHighlighter internally */
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  max-height: 60vh; /* Limit result image height */
+}
+
+.childUploadImage-upload-button {
+  padding: 15px 25px;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, #ff7676, #f54ea2);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-top: 20px; /* Keep consistent margin */
+}
+
+.childUploadImage-upload-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.childUploadImage-upload-button:disabled {
+  background: linear-gradient(45deg, #cccccc, #999999);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.childUploadImage-uploading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.childUploadImage-spinner {
+  animation: childUploadImage-spin 1s linear infinite;
+}
+
+@keyframes childUploadImage-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.childUploadImage-result-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.childUploadImage-image-container {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%; /* Ensure it takes available width for centering image */
+  display: flex; /* For centering the highlighter wrapper */
+  justify-content: center; /* For centering the highlighter wrapper */
+}
+
+.childUploadImage-bookmark-button {
+  position: absolute;
+  top: 20px; /* Adjusted for padding inside highlighter-wrapper */
+  left: 20px; /* Adjusted for padding inside highlighter-wrapper */
+  padding: 8px 12px;
+  font-size: 1.2rem; /* Made star slightly larger */
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #f5a623; /* Gold-ish color for star outline */
+  border: none;
+  border-radius: 50%; /* Make it circular */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.childUploadImage-bookmark-button:hover {
+  transform: scale(1.1);
+  background-color: white;
+}
+
+.childUploadImage-bookmark-button.bookmarked {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+
+.childUploadImage-caption-box {
+  width: 100%;
+  max-width: 700px; /* Max width for caption box */
+  background-color: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.childUploadImage-caption-box h3 { /* Style for "Story About Your Picture:" */
+  color: #ff7676;
+  font-size: 1.8rem;
+  margin-top: 0; /* Remove default margin */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* TextHighlighter and CaptionRenderer will inherit font styles or can be styled further if needed */
+
+.childUploadImage-audio-player {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.childUploadImage-play-button {
+  padding: 12px 25px;
+  font-size: 1.3rem;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.childUploadImage-play-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.childUploadImage-audio-element {
+  display: none;
+}
+
+.childUploadImage-new-upload-button {
+  padding: 15px 25px;
+  font-size: 1.3rem;
+  background: linear-gradient(45deg, #a8e063, #56ab2f);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.childUploadImage-new-upload-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #56ab2f, #a8e063);
+}
+
+.childUploadImage-error {
+  color: #ff3333;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 80%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Notification Bubble */
+.childUploadImage-notification-bubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff8c00; /* Orange like in example */
+  color: white;
+  padding: 12px; /* Slightly larger padding */
+  border-radius: 50%;
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px; /* Larger emoji/icon */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.childUploadImage-notification-bubble:hover {
+  transform: scale(1.1);
+}
+
+
+/* Chat Window */
+.childUploadImage-chat-window {
+  position: fixed;
+  bottom: 20px; /* Adjust if it overlaps with bubble or if bubble is hidden */
+  right: 20px; /* Align with where bubble was, or choose new position */
+  /* Or center it:
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  */
+  background-color: #f9f9f9; /* Lighter background */
+  border: 1px solid #e0e0e0;
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 320px; /* Slightly wider */
+  max-height: 450px; /* Slightly taller */
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* To contain children within border-radius */
+}
+
+.childUploadImage-chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #ff8c00; /* Header background */
+  color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.childUploadImage-chat-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.childUploadImage-chat-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem; /* Larger close icon */
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+}
+.childUploadImage-chat-close:hover {
+  opacity: 0.8;
+}
+
+.childUploadImage-chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: white; /* Messages area background */
+}
+
+.childUploadImage-chat-message {
+  background-color: #eef7ff; /* Light blue for messages */
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+.childUploadImage-chat-message:last-child {
+  margin-bottom: 0;
+}
+.childUploadImage-chat-message p {
+  margin: 0;
+}
+.childUploadImage-chat-message strong { /* If you use strong tags */
+  color: #0056b3;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .childUploadImage-container {
+    padding-top: 70px; /* Adjust for smaller screens */
+  }
+  .childUploadImage-back-button {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+  .childUploadImage-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .childUploadImage-drop-zone {
+    max-width: 90%;
+    min-height: 200px;
+    font-size: 1.3rem;
+  }
+  .childUploadImage-option-button {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    min-width: 180px;
+  }
+  .childUploadImage-option-button .childUploadImage-drop-icon {
+    font-size: 1.5rem;
+  }
+
+  .childUploadImage-camera-view {
+    max-width: 95%;
+  }
+  .childUploadImage-capture-button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.3rem;
+  }
+  .childUploadImage-cancel-button {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  .childUploadImage-upload-button {
+    font-size: 1.3rem;
+    padding: 12px 20px;
+  }
+  .childUploadImage-change-button {
+    font-size: 1.1rem;
+    padding: 10px 18px;
+  }
+  .childUploadImage-caption-box h3 {
+    font-size: 1.5rem;
+  }
+  .childUploadImage-caption-box { /* TextHighlighter/CaptionRenderer content */
+    font-size: 1.1rem; /* Adjust base font for caption text */
+  }
+  .childUploadImage-play-button {
+    font-size: 1.1rem;
+  }
+  .childUploadImage-new-upload-button {
+    font-size: 1.2rem;
+  }
+
+  .childUploadImage-chat-window {
+    width: 90%;
+    max-width: 300px; /* Ensure it doesn't get too wide on tablets */
+    bottom: 10px;
+    right: 10px;
+    /* If centered:
+    left: 50%;
+    transform: translateX(-50%);
+    */
+  }
+  .childUploadImage-notification-bubble {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .childUploadImage-title {
+    font-size: 1.8rem;
+  }
+  .childUploadImage-options {
+    flex-direction: column; /* Stack buttons on very small screens */
+  }
+  .childUploadImage-option-button {
+    width: 100%; /* Full width for stacked buttons */
+  }
+  .childUploadImage-camera-controls {
+    bottom: 5px; /* Bring controls a bit lower */
+    gap: 15px;
+  }
+  .childUploadImage-capture-button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+    border-width: 4px;
+  }
+  .childUploadImage-cancel-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  .childUploadImage-preview-frame, .childUploadImage-highlighter-wrapper {
+    border-width: 8px;
+  }
+  .childUploadImage-bookmark-button {
+    top: 15px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  .childUploadImage-chat-window {
+    /* Make chat window take more screen width on small phones if it's not full screen */
+  }
+}

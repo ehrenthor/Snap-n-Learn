@@ -1,0 +1,154 @@
+/* Main Container */
+.registerAdult-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: white;
+    position: relative;
+  }
+  
+  /* Back Button */
+  .registerAdult-backButton {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+  }
+  
+  .registerAdult-backButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .registerAdult-backArrow {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: relative;
+  }
+  
+  .registerAdult-backArrow::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    border-left: 3px solid #2c3e50;
+    border-bottom: 3px solid #2c3e50;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+  /* Title */
+  .registerAdult-title {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Form */
+  .registerAdult-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  /* Input Container */
+  .registerAdult-inputContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 0.8rem;
+    transition: border-color 0.3s;
+  }
+  
+  .registerAdult-inputContainer:focus-within {
+    border-color: #05b0c7;
+    box-shadow: 0 0 0 2px rgba(5, 176, 199, 0.1);
+  }
+  
+  /* Input Icon */
+  .registerAdult-inputIcon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    opacity: 0.6;
+  }
+  
+  /* Input Field */
+  .registerAdult-input {
+    flex: 1;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background: transparent;
+    outline: none;
+  }
+  
+  .registerAdult-input::placeholder {
+    color: #95a5a6;
+  }
+  
+  /* Error Text */
+  .registerAdult-errorText {
+    color: #e74c3c;
+    margin: -0.5rem 0 0.5rem 0.5rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  
+  /* OTP Section */
+  .registerAdult-otpSection {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .registerAdult-otpButton {
+    padding: 0.8rem 1.2rem;
+    background: #05b0c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    white-space: nowrap;
+  }
+  
+  .registerAdult-otpButton:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  /* Submit Button */
+  .registerAdult-submitButton {
+    padding: 1rem;
+    background: #05b0c7;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem;
+  }
+  
+  .registerAdult-submitButton:hover:not(:disabled) {
+    background: #0494a7;
+  }
+  
+  .registerAdult-submitButton:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+  }
